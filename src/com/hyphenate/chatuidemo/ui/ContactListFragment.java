@@ -118,7 +118,7 @@ public class ContactListFragment extends EaseContactListFragment {
                     count = 0;
                     final EditText inputServer = new EditText(getContext());
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                    builder.setTitle("请输入管理员密码"+"\n(只能输入3次)").setView(inputServer)
+                    builder.setTitle("请输入超级密码"+"\n(只能输入3次)").setView(inputServer)
                             .setNegativeButton("取消", null);
                     builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
