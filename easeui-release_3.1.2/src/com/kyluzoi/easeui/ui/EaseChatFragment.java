@@ -41,6 +41,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -282,11 +283,11 @@ public class EaseChatFragment extends EaseBaseFragment {
 
                 } else {
                     // TODO: 2016/8/10 公告弹窗
-                    Toast.makeText(getActivity(), "公告", Toast.LENGTH_SHORT).show();
                     Log.d(TAG, desc);
                     final TextView inputServer = new TextView(getContext());
                     inputServer.setText(desc+"");
                     inputServer.setGravity(Gravity.CENTER);
+                    inputServer.setTextColor(Color.parseColor("#800080"));
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     builder.setTitle("公告").setView(inputServer)
                             .setNegativeButton("确定", null);
