@@ -42,7 +42,7 @@ public class EaseChatRowText extends EaseChatRow {
 
         if (AdminUtils.isAdmin(message.getFrom())) {
             contentView.setTextColor(Color.parseColor("#ff0000"));
-        }else contentView.setTextColor(Color.parseColor("#ff000000"));
+        } else contentView.setTextColor(Color.parseColor("#000000"));
         // 设置内容
         contentView.setText(span, BufferType.SPANNABLE);
 

@@ -222,7 +222,7 @@ public class LoginActivity extends BaseActivity {
 			return;
 		}else if (username.length()<=3||username.length()>=8)
 		{
-			Toast.makeText(this, "用户名长度不对", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "用户名长度不对,字母和数字3-8位", Toast.LENGTH_SHORT).show();
 			usernameEditText.requestFocus();
 			return;
 		}

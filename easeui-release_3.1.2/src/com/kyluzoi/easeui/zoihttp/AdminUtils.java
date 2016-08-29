@@ -11,6 +11,11 @@ import android.util.Log;
 public class AdminUtils {
 
     public static boolean isAdmin(String xxx) {
+
+        if(xxx.length()<5)
+        {
+            return false;
+        }
         xxx = xxx.substring(2,5);
         Log.d("AdminUtils", xxx);
         if (TextUtils.equals(xxx, "gly")) {

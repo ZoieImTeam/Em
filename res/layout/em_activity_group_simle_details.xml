@@ -10,8 +10,8 @@
         android:layout_height="@dimen/height_top_bar"
         android:background="@color/top_bar_normal_bg"
         android:gravity="center_vertical" >
-		
-        <include 
+
+        <include
             layout="@layout/ease_commom_back_btn"
             />
 
@@ -58,6 +58,7 @@
             android:textColor="#0F0F0F"
             android:textSize="16sp" />
     </RelativeLayout>
+
 
     <Button
         android:id="@+id/btn_add_to_group"

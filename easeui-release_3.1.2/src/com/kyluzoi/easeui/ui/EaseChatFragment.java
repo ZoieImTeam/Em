@@ -50,6 +50,7 @@ import android.provider.MediaStore;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.text.ClipboardManager;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -285,14 +286,18 @@ public class EaseChatFragment extends EaseBaseFragment {
                     // TODO: 2016/8/10 公告弹窗
                     Log.d(TAG, desc);
                     final TextView inputServer = new TextView(getContext());
+                    inputServer.setMovementMethod(ScrollingMovementMethod.getInstance());
                     inputServer.setText(desc+"");
                     inputServer.setGravity(Gravity.CENTER);
                     inputServer.setTextColor(Color.parseColor("#800080"));
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                    WindowManager.LayoutParams lParams =builder.create().getWindow().getAttributes();
+                    lParams.height=220;
                     builder.setTitle("公告").setView(inputServer)
                             .setNegativeButton("确定", null);
                     builder.setCancelable(false);
                     builder.show();
+                    builder.create().getWindow().setAttributes(lParams);
                 }
             }
         });
