@@ -59,6 +59,22 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/btn_add_to_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/em_btn_green_selector"
+        android:padding="7dp"
+        android:text="@string/To_join_the_chat"
+        android:onClick="addToGroup"
+        android:enabled="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
     <LinearLayout
         android:id="@+id/email_contanier"
         android:layout_width="match_parent"
@@ -118,20 +134,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_add_to_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/em_btn_green_selector"
-        android:padding="7dp"
-        android:text="@string/To_join_the_chat"
-        android:onClick="addToGroup"
-        android:enabled="false"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
+
 
 </LinearLayout>

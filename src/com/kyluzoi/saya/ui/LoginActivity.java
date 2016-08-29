@@ -220,10 +220,11 @@ public class LoginActivity extends BaseActivity {
 			Toast.makeText(this, getResources().getString(R.string.User_name_cannot_be_empty), Toast.LENGTH_SHORT).show();
 			usernameEditText.requestFocus();
 			return;
-		}else if (username.length()>3&&username.length()<8)
+		}else if (username.length()<=3||username.length()>=8)
 		{
 			Toast.makeText(this, "用户名长度不对", Toast.LENGTH_SHORT).show();
 			usernameEditText.requestFocus();
+			return;
 		}
 		else if (TextUtils.isEmpty(pwd)) {
 			Toast.makeText(this, getResources().getString(R.string.Password_cannot_be_empty), Toast.LENGTH_SHORT).show();
