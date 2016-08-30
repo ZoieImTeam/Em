@@ -16,12 +16,14 @@ package com.kyluzoi.saya.ui;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.kyluzoi.saya.AppUtil;
 import com.kyluzoi.saya.Constant;
 import com.kyluzoi.saya.DemoHelper;
 import com.kyluzoi.saya.DemoModel;
 import com.kyluzoi.saya.R;
 import com.kyluzoi.easeui.widget.EaseSwitchButton;
 
+import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -132,7 +134,7 @@ public class SettingsFragment extends Fragment implements OnClickListener {
 		
 		logoutBtn = (Button) getView().findViewById(R.id.btn_logout);
 		if(!TextUtils.isEmpty(EMClient.getInstance().getCurrentUser())){
-			logoutBtn.setText(getString(R.string.button_logout) + "(" + EMClient.getInstance().getCurrentUser() + ")");
+			logoutBtn.setText(getString(R.string.button_logout) + "(" + EMClient.getInstance().getCurrentUser() + ")"+ AppUtil.getVerName(getContext()));
 		}
 
 		textview1 = (TextView) getView().findViewById(R.id.textview1);
